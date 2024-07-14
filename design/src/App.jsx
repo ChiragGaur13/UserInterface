@@ -22,16 +22,16 @@ function App() {
     <GlobalStyle />    
     <div className='flex h-full'>
 
-        <div className='flex w-2/5 h-full left-0 items-center'>
+        <div className='flex w-2/5 min-h-min left-0 items-center'>
           
-          <div className='flex flex-col justify-center mt-20 mx-20 w-full'>
+          <div className='flex flex-col justify-center mt-12 mx-20 w-full'>
 
             <div className='flex justify-center'>
-              <img className='flex justify-center ' src={logo} alt="" />
+              <img src={logo} alt="" />
             </div>
 
-            <div className='flex flex-col'>
-              <h1 className='text-amber-500 pt-10 text-lg pb-5 font-semibold'>Login</h1>
+            <div className=''>
+              <h1 className='text-amber-500 pt-10 text-lg pb-5 font-bold'>Login</h1>
 
               <form  className='flex flex-col ' action="">
                 <label htmlFor="" className='md:font-bold pb-1'>Email or Mobile</label>
@@ -44,9 +44,9 @@ function App() {
                   placeholder='Enter password'/>
                   {
                     show ? (
-                      <img src={open} alt="" className='absolute top-4 right-4 h-5 w-5' onClick={clickIcon}/>
+                      <img src={open} alt="" className='absolute top-5 right-4 h-4 w-4' onClick={clickIcon}/>
                     ) : (
-                  <img src={close} alt="" className='absolute top-4 right-4 h-5 w-5' onClick={clickIcon}/>
+                  <img src={close} alt="" className='absolute top-5 right-4 h-4 w-4' onClick={clickIcon}/>
                       
                     )
                   }
@@ -54,10 +54,10 @@ function App() {
  
                 </div>
 
-                <h1 className='text-right md:font-medium pt-2 pb-4'>FORGOT PASSWORD?</h1>
+                <h1 className='text-right md:font-medium pt-2 pb-4 text-sm'>FORGOT PASSWORD?</h1>
 
                 <button type='submit' className='w-full font-bold py-3 px-4 bg-amber-500 rounded-md'>SUBMIT</button>
-                <div className='flex justify-center py-20'>Not have an account? <a href="" className='text-blue-700 underline'>Register Here</a></div>
+                <div className='flex justify-center py-20 test-sm'>Not have an account? <a href="" className='text-blue-700 underline'>Register Here</a></div>
                 
               </form>
           </div>
