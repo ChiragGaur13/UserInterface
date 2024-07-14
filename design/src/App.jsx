@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import { createGlobalStyle } from 'styled-components';
 import Group from './assets/img/Group.png';
 import logo from './assets/img/logo.png';
 import open from './assets/open.png'
 import close from './assets/close.png'
 
-// import './App.css'
+const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+body{font-family: 'Space Grotesk', 'sans-serif'}`;
+
 
 function App() {
   const [show, setShow] = useState("false");
@@ -16,18 +18,20 @@ function App() {
 
   return (
     <>
+    
+    <GlobalStyle />    
     <div className='flex h-full'>
 
-        <div className='flex w-2/5 h-full left-0 items-center '>
+        <div className='flex w-2/5 h-full left-0 items-center'>
           
-          <div className='flex flex-col justify-center mt-20 mx-20 w-full h-full '>
+          <div className='flex flex-col justify-center mt-20 mx-20 w-full'>
 
             <div className='flex justify-center'>
               <img className='flex justify-center ' src={logo} alt="" />
             </div>
 
             <div className='flex flex-col'>
-              <h1 className='text-amber-500 pt-10 text-lg pb-5 font-medium'>Login</h1>
+              <h1 className='text-amber-500 pt-10 text-lg pb-5 font-semibold'>Login</h1>
 
               <form  className='flex flex-col ' action="">
                 <label htmlFor="" className='md:font-bold pb-1'>Email or Mobile</label>
