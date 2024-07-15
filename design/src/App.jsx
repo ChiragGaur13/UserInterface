@@ -7,7 +7,7 @@ import close from './assets/close.png'
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-body{font-family: 'Space Grotesk', 'sans-serif'}`;
+  body{font-family: 'Space Grotesk', 'sans-serif'}`;
 
 
 function App() {
@@ -54,10 +54,13 @@ function App() {
  
                 </div>
 
-                <h1 className='text-right md:font-medium pt-2 pb-4 text-sm'>FORGOT PASSWORD?</h1>
+                <h1 className='text-right font-medium pt-2 pb-4 text-sm'>FORGOT PASSWORD?</h1>
 
+                <div>
                 <button type='submit' className='w-full font-bold py-3 px-4 bg-amber-500 rounded-md'>SUBMIT</button>
-                <div className='flex justify-center py-20 test-sm'>Not have an account? <a href="" className='text-blue-700 underline'>Register Here</a></div>
+                </div>
+                
+                <p className='flex justify-center py-20 font-medium tracking-tighter gap-1'>Not have an account? <a href="" className='text-blue-700 underline font-normal'>Register Here</a></p>
                 
               </form>
           </div>
